@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Vulnerable Assignment Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #f5f5f5;
+      text-align: center;
+    }
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background-color: #6200ea;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    button:hover {
+      background-color: #3700b3;
+    }
+    .assignment {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+  <h1>AI Vulnerable Assignment Generator</h1>
+  <button onclick="showAssignment()">Show me my assignment</button>
+  <div class="assignment" id="assignmentText">Press the button to receive a random AI-vulnerable assignment.</div>
+
+  <script>
+    const assignments = [
+      "Write a 5-paragraph essay analyzing the symbolism in 'The Great Gatsby'.",
+      "Compose a persuasive speech on the importance of climate change awareness.",
+      "Summarize the causes and consequences of World War I.",
+      "Explain the process of cellular respiration in biology.",
+      "Compare and contrast two political ideologies: capitalism and socialism.",
+      "Analyze the impact of social media on mental health.",
+      "Write a book review of 'To Kill a Mockingbird'.",
+      "Describe the function of the Federal Reserve in the U.S. economy.",
+      "Draft a reflective essay on your first year in college.",
+      "Explain how photosynthesis works, using proper scientific terminology.",
+      "Discuss the pros and cons of online learning vs. traditional learning.",
+      "Write a character analysis of Hamlet in Shakespeare's play.",
+      "Summarize the major theories of Sigmund Freud.",
+      "Write a paper on the ethical implications of artificial intelligence.",
+      "Compose a short story that illustrates a moral lesson.",
+      "Analyze a recent Supreme Court decision and its implications.",
+      "Write a critique of a famous painting from the Renaissance period.",
+      "Explain how the stock market works in simple terms.",
+      "Discuss the cultural significance of hip hop in modern society.",
+      "Describe how a bill becomes a law in the United States."
+    ];
+
+    function showAssignment() {
+      const randomIndex = Math.floor(Math.random() * assignments.length);
+      document.getElementById("assignmentText").innerText = assignments[randomIndex];
+    }
+  </script>
+</body>
+</html>
